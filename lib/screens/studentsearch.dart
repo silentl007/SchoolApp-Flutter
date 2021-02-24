@@ -9,13 +9,17 @@ class StudentSearch extends StatefulWidget {
 class _StudentSearchState extends State<StudentSearch> {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    double padding10 = size.height * 0.01252;
+    double hori90 = size.height * 0.1126;
+    double font20 = size.height * 0.02503;
     final textfieldstring = TextEditingController();
     return Scaffold(
       backgroundColor: Color.fromRGBO(8, 30, 67, 1),
       appBar: AppBar(
         title: Text(
           'Students Search',
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: font20, fontWeight: FontWeight.bold),
         ),
         backgroundColor: Color.fromRGBO(8, 30, 67, 1),
         centerTitle: true,
@@ -29,8 +33,8 @@ class _StudentSearchState extends State<StudentSearch> {
                 style: TextStyle(color: Colors.white),
               ),
               Container(
-                padding: EdgeInsets.all(10),
-                margin: EdgeInsets.symmetric(horizontal: 90),
+                padding: EdgeInsets.all(padding10),
+                margin: EdgeInsets.symmetric(horizontal: hori90),
                 child: TextField(
                   textInputAction: TextInputAction.newline,
                   style: TextStyle(color: Colors.white),

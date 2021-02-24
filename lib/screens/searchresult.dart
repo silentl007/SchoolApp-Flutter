@@ -52,12 +52,14 @@ class _ResultState extends State<Result> {
 
   @override
   Widget build(BuildContext context) {
+     Size size = MediaQuery.of(context).size;
+    double font20 = size.height * 0.02503;
     return Scaffold(
       backgroundColor: Color.fromRGBO(8, 30, 67, 1),
       appBar: AppBar(
         title: Text(
           'Search Result',
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: font20, fontWeight: FontWeight.bold),
         ),
         backgroundColor: Color.fromRGBO(8, 30, 67, 1),
         centerTitle: true,

@@ -8,6 +8,8 @@ class Announcement extends StatefulWidget {
 class _AnnouncementState extends State<Announcement> {
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    double height10 = size.height * 0.1252;
     return Scaffold(
       backgroundColor: Color.fromRGBO(8, 30, 67, 1),
       appBar: AppBar(
@@ -21,7 +23,7 @@ class _AnnouncementState extends State<Announcement> {
       body: Column(
         children: <Widget>[
           Container(
-            height: 100,
+            height: height10,
             decoration: BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage('assets/banners/Banner_Announcement.png'),
